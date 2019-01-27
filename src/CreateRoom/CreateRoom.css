@@ -8,11 +8,11 @@ input {
   font-size: 6vw;
   background-color: #282828;
   border-radius: 5px;
-  border: 2px solid white;
+  border: 2px solid #808080;
   color:white;
   padding: .5em;
   font-family: 'Nunito', sans-serif;
-  width: 75%;
+  width: 70%;
   margin-top:.5em;
 }
 
