@@ -59,7 +59,6 @@ class CreateRoom extends Component {
               <Logo />
               <div className="buttons">
                 <br />
-                {/* <span className = "title">Room Name</span> */}
                 <br />
                 <input
                   placeholder="Enter Room Name"
