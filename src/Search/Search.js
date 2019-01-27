@@ -34,7 +34,11 @@ class Search extends Component {
     return (
       <div>
         <center>
-          {this.state.results ? (
+          <div>
+            <input placeholder="Search..." onChange={this.updateQuery} />
+            <Button state="secondary" text="Search" onClick={this.doSearch} />
+          </div>
+          {this.state.results && (
             <div>
               <SongCardList
                 songs={this.state.results}
@@ -46,11 +50,6 @@ class Search extends Component {
                 </Link>
                 <Button state = "secondary" text="Suggest Songs" />
               </div>
-            </div>
-          ) : (
-            <div>
-              <input placeholder="Search..." onChange={this.updateQuery} />
-              <Button state="secondary" text="Search" onClick={this.doSearch} />
             </div>
           )}
         </center>
