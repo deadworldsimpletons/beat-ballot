@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import ReactAudioPlayer from "react-audio-player";
 import "./Room.css";
+=======
+>>>>>>> parent of 3348661... Merge branch 'room' into style-fixing
 =======
 >>>>>>> parent of 3348661... Merge branch 'room' into style-fixing
 import image from "../tempImages/qr.png";
