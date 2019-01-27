@@ -45,12 +45,12 @@ class App extends Component {
   render() {
     return (
         <Router>
-        <div>
-         <Route exact path="/" exact component={indexPage} />
-         <Route exact path="/CreateRoom/" component={aboutPage} />
-         <Route exact path="/JoinRoom/" component={usersPage} />
-         <Route exact path="/ActivePageTest/" component={activePage} />
-        </div>
+          <div>
+            <Route exact path="/" exact component={indexPage} />
+            <Route exact path="/CreateRoom/" component={aboutPage} />
+            <Route exact path="/JoinRoom/" component={usersPage} />
+            <Route exact path="/ActivePageTest/" component={activePage} />
+          </div>
         </Router>
     );
   }

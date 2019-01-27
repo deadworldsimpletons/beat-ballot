@@ -17,7 +17,7 @@ class Button extends Component {
   }
   render() {
     return (
-      <button type="button" className={this.buttonColor()}>{this.props.text}</button>
+      <button type="button" className={this.buttonColor()} onClick={this.props.onClick}>{this.props.text}</button>
     );
   }
 }
