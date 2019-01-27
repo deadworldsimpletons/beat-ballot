@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+input {
+  font-size: 4em;
+  background-color: #282828;
+  border-radius: 10px;
+  border: 4px solid white;
+  color:white;
+  padding: .5em;
+  font-family: 'Nunito', sans-serif;
+}

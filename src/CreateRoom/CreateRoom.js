@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import './CreateRoom.css';
 import Button from '../Button/Button.js';
+import Logo from '../Logo/Logo.js';
 
 class CreateRoom extends Component {
   state = {
@@ -38,8 +39,9 @@ class CreateRoom extends Component {
           </div>
           :
           <div>
-            <img src = "../images/beatBallot.png" />
+            <Logo />
             <div className = "buttons">
+              <br />
               <input onChange={this.updateName} />
               <Button color='red' text='Create a Room' onClick={this.createRoom} />
             </div>
