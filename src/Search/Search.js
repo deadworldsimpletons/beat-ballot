@@ -32,7 +32,6 @@ class Search extends Component {
     return (
       <div>
         <center>
-<<<<<<< HEAD
           {this.state.results ? (
             <div>
               <SongCardList
@@ -46,10 +45,6 @@ class Search extends Component {
               <Button state="secondary" text="Search" onClick={this.doSearch} />
             </div>
           )}
-=======
-        <input onChange={this.doSearch} placeholder = "Search" />
-        <SongCardList songs={this.state.results} onClick={this.props.onClick} />
->>>>>>> c2ff0023244c20a8c8ed47aaf6fa8c5073440da2
         </center>
       </div>
     );

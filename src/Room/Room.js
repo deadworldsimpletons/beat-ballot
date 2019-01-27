@@ -19,13 +19,10 @@ class Room extends Component {
   }
 
   getRoom() {
-    lib.nwhacks19.api["@dev"].poll_room(
-      this.props.location.state,
-      (err, res) => {
-        if (err) throw err;
-        this.setState(res);
-      }
-    );
+    lib.nwhacks19.api["@dev"].poll_room(this.props.match.params, (err, res) => {
+      if (err) throw err;
+      this.setState(res);
+    });
   }
 
   render() {

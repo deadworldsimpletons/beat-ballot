@@ -29,12 +29,7 @@ class JoinRoom extends Component {
           </div>
           <p>(placeholder)Or scan QR code</p>
           <div className="buttons">
-            <Link
-              to={{
-                pathname: "/Room/",
-                state: { room_id: this.state.room_id }
-              }}
-            >
+            <Link to={`/Room/${this.state.room_id}`}>
               <Button state="primary" text="Join" />
             </Link>
             <Link to="/">
