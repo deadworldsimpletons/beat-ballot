@@ -45,7 +45,7 @@ class CreateRoom extends Component {
                 <p>Scan to Join</p>
                 <div className="roomIdName">{this.state.room_id}</div>
                 <div className="buttons">
-                  <Link to="/Room" params={{ room_id: this.state.room_id }}>
+                  <Link to={`/Room/${this.state.room_id}/true`}>
                     <Button state="primary" text="Continue to Room" />
                   </Link>
                   <Link to="/">

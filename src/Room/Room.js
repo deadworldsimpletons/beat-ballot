@@ -12,9 +12,10 @@ class Room extends Component {
   state = {
     name: false,
     voting_pool: [],
+    already_voted_ids: {},
     now_playing: false,
     next_playing: false,
-    qr: false
+    qr: false,
   };
 
   constructor(props) {
@@ -49,11 +50,22 @@ class Room extends Component {
     });
   }
 
+  vote(is_upvote) {
+    return song => {
+      config.lib.vote({ room_id: this.room_id, song_id: song.id, is_upvote }, (err, res) => {
+        if (err) throw err;
+      });
+      this.setState({already_voted_ids: {...this.state.already_voted_ids, [song.id]: true}});
+    }
+  }
+
   componentDidMount() {
+    this.getRoom();
     setInterval(this.getRoom, config.pollInterval);
   }
 
   render() {
+    const relevant_voting_pool = this.state.voting_pool.filter(c => !this.state.already_voted_ids[c.id]);
     return (
       <div>
         <center>
@@ -75,8 +87,16 @@ class Room extends Component {
               songs={this.state.next_playing ? [this.state.next_playing] : []}
             />
             <h1>Candidates:</h1>
-            {/* TODO: swiping */}
-            <SongCardList songs={this.state.voting_pool} />
+            { /* TODO: swiping */ }
+            <SongCardList songs={relevant_voting_pool} left={[{
+              text: "✔",
+              onSwipe: this.vote(true),
+              style: { backgroundColor: 'lightgreen', color: 'white' },
+            }]} right={[{
+              text: "✗",
+              onSwipe: this.vote(false),
+              style: { backgroundColor: 'red', color: 'white' },
+            }]}/>
             <Search onClick={this.addSuggestion} />
           </div>
         </center>
