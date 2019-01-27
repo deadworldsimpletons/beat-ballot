@@ -4,6 +4,7 @@ import "./CreateRoom.css";
 import Button from "../Button/Button.js";
 import Logo from "../Logo/Logo.js";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import config from "../config.js";
 
 class CreateRoom extends Component {
   state = {
@@ -24,7 +25,7 @@ class CreateRoom extends Component {
   }
 
   createRoom(e) {
-    lib.nwhacks19.api["@0.1.0"].create_room(
+    config.lib.create_room(
       { name: this.state.name },
       (err, res) => {
         this.setState(res);
