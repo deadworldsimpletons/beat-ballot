@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-* {
-  margin:.3em;
-}
 button {
-  font-size:2em;
+  font-size:4vh;
   border-radius: 4px;
   color:white;
   font-family: 'Nunito', sans-serif;
   width: 80%;
-  padding: .75em;
+  padding: 1em;
   opacity: .8;
   border:none;
+  margin: .5em;
+  font-weight: bold;
 }
 
 Button:active{
