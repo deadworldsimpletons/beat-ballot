@@ -5,13 +5,16 @@ button {
   color:white;
   font-family: 'Nunito', sans-serif;
   width: 80%;
-  padding: 1em;
+  padding: .75em;
   opacity: .8;
   border:none;
-  margin: .5em;
+  margin: 1em;
   font-weight: bold;
 }
 
+.buttons {
+  bottom:0;
+}
 Button:active{
   opacity: 1;
 }

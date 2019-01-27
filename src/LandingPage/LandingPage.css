@@ -7,3 +7,10 @@ body {
   height: 100%;
   margin-bottom: 0;
 }
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  align-content:space-around;
+
+}

@@ -16,7 +16,7 @@ class JoinRoom extends Component {
         </div>
         <p>Scan to Join</p>
         <div className = "buttons">
-          <Button color='blue' text='Back'/>
+          <Button state = 'primary' text='Back'/>
         </div>
         </center>
       </div>

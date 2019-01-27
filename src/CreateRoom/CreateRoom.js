@@ -33,17 +33,24 @@ class CreateRoom extends Component {
       <div>
         <center>
         { this.state.qr_data_url ?
-          <div>
+          <div className = "qrCode">
             <img src={this.state.qr_data_url} />
-            <div>{this.state.room_id}</div>
+            <p>Scan to Join</p>
+            <div className = "roomIdName">{this.state.room_id}</div>
+            <div className = "buttons">
+              <Button state = 'primary' text='Back'/>
+            </div>
           </div>
+
           :
           <div>
             <Logo />
             <div className = "buttons">
               <br />
-              <input onChange={this.updateName} />
-              <Button color='red' text='Create a Room' onClick={this.createRoom} />
+              {/* <span className = "title">Room Name</span> */ }
+              <br />
+              <input placeholder = "Enter Room Name" onChange={this.updateName} />
+              <Button state='secondary' text='Create a Room' onClick={this.createRoom} />
             </div>
           </div>
         }

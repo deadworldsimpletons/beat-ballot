@@ -6,12 +6,12 @@ import Logo from '../Logo/Logo.js';
 class LandingPage extends Component {
   render() {
     return (
-      <div>
+      <div className = "contents">
         <center>
         <Logo />
         <div className = "buttons">
-          <Button color='blue' text='Join a Room' />
-          <Button color='red' text='Create a Room'/>
+          <Button state ='primary' text='Join a Room' />
+          <Button state = 'secondary' text='Create a Room'/>
         </div>
         </center>
       </div>
