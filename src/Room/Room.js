@@ -6,6 +6,7 @@ import SongCardList from "../SongCardList/SongCardList.js";
 import Search from "../Search/Search.js";
 import Logo from "../Logo/Logo.js";
 import config from "../config.js";
+import "./Room.css";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Room extends Component {
@@ -57,7 +58,7 @@ class Room extends Component {
     return (
       <div>
         <center>
-          <div>
+          <div className = "roomHeader">
             <h1>Now Playing:</h1>
             {this.is_owner && this.state.now_playing && (
               <ReactAudioPlayer

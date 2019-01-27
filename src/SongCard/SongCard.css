@@ -16,15 +16,13 @@
 
 .contain {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
+  float: left;
+  align-content: left;
   width: 75%;
 }
 
 .cover {
   display: inline-block;
-  width: 25%;
   margin: .5em;
 }
 

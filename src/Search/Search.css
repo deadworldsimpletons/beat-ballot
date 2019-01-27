@@ -1,16 +1,13 @@
-.searchButtons {
-  display: inline-block;
-  width: 100%;
-}
-
 .searchButtons button{
-  width: 40%;
-  margin-right: 5%;
-  margin-left: 5%;
+  width: 20%;
   font-size: 4.5vw;
 }
 
 .searchPage {
   background: url(../images/search.png) no-repeat scroll 7px 7px;
   padding-left:30px;
+}
+
+.songListReturn {
+  margin-bottom: 1.25em;
 }
