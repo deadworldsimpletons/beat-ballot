@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 button {
-  font-size:4vh;
+  font-size:6vw;
   border-radius: 4px;
   color:white;
   font-family: 'Nunito', sans-serif;
@@ -10,11 +10,13 @@ button {
   border:none;
   margin-top: 1em;
   font-weight: bold;
+  box-shadow: 3px 3px 5px 6px #282828; 
 }
 
 .buttons {
   bottom:0;
 }
+
 Button:active{
   opacity: 1;
 }
