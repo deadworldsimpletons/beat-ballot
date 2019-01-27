@@ -32,6 +32,7 @@ class CreateRoom extends Component {
     );
   }
 
+  //params ???
   render() {
     return (
       <div>

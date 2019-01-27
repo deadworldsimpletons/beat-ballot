@@ -13,32 +13,27 @@ class Room extends Component {
     qr: ""
   };
 
-  constructor(props) {
-    super(props);
-    this.getRoom = this.getRoom.bind(this);
-  }
-
   getRoom() {
     lib.nwhacks19.api["@dev"].poll_room(this.props.match.params, (err, res) => {
       if (err) throw err;
       this.setState(res);
     });
   }
-
+  //Room Name
+  //Voting Pool as SongCardList
+  //Add Suggestion Button -> Search view
   render() {
-    this.getRoom();
+    //this.getRoom();
     return (
       <div>
         <center>
-          <p>{this.state.name}</p>
+          <p>{this.props.match.params.room_id}</p>
           <div className="input">
             <input placeholder="Room ID" />
           </div>
-          <p>(placeholder)Or scan QR code</p>
           <div className="buttons">
-            <Button state="primary" text="Join" />
             <Link to="/">
-              <Button state="primary" text="Back" />
+              <Button state="primary" text="Add Suggestion" />
             </Link>
           </div>
         </center>
