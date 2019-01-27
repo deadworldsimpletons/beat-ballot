@@ -1,32 +1,58 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 
 .card {
-  display: inline-table;
-  border: 2px solid black;
-  width: 100%;
-  float: left;
+  background-color: #282828;
+  width: 90%;
   color: white;
-}
-.card > * {
-  display: inline-block;
-}
-.cover {
-  width: 25%;
-}
-.cover img {
-  width: 25%;
-}
-
-.songInfo:first-child{
-  font-size: 3em;
-
-}
-
-.songInfo > * {
-  display: inline-block;
+  font-size:3vw;
   font-family: 'Nunito', sans-serif;
+  display: flex;
+  flex-direction: row;
+  margin-top: .5em;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.votes p{
+.contain {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 75%;
+}
 
+.cover {
+  display: inline-block;
+  width: 25%;
+  margin: .5em;
+}
+
+.cover img {
+  display: block;
+  width: 100%;
+}
+
+.songInfo .artist{
+  font-weight: bold;
+}
+
+.songInfo .songTitle{
+  font-style: italic;
+}
+
+.songInfo {
+  vertical-align: middle;
+}
+
+.votes .upVote {
+  color: green;
+}
+
+.votes .downVote {
+  color: red;
+}
+
+.votes {
+  width: 25%;
+  margin-right: 1em;
 }
