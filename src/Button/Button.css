@@ -8,9 +8,9 @@ button {
   padding: .75em;
   opacity: .8;
   border:none;
-  margin-top: 1em;
+  margin-top: 1.5em;
   font-weight: bold;
-  box-shadow: 3px 3px 5px 6px #282828; 
+  box-shadow: 3px 3px 5px 6px #282828;
 }
 
 .buttons {
