@@ -9,8 +9,5 @@ body {
 }
 
 .contents {
-  display: flex;
-  flex-direction: column;
-  align-content:space-around;
-
+  transform: translateY(30%);
 }
