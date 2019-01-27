@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
 .card {
   display: inline-table;
   border: 2px solid black;
   width: 100%;
   float: left;
+  color: white;
 }
 .card > * {
   display: inline-block;
@@ -14,9 +17,9 @@
   width: 25%;
 }
 
-.songInfo p:first-child{
-  font-size: auto;
-  font-weight: bold;
+.songInfo:first-child{
+  font-size: 3em;
+
 }
 
 .songInfo > * {
