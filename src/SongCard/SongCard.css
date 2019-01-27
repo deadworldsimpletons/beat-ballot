@@ -8,9 +8,10 @@
   font-family: 'Nunito', sans-serif;
   display: flex;
   flex-direction: row;
-  margin-top: .5em;
+  margin-top: 1em;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 2px 2px 4px 2px #242424;
 }
 
 .contain {
