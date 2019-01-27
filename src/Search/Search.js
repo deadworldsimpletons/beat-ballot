@@ -4,6 +4,8 @@ import config from "../config.js";
 import "./Search.css";
 import SongCardList from "../SongCardList/SongCardList.js";
 import Button from "../Button/Button.js";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 
 class Search extends Component {
   state = {
@@ -38,6 +40,10 @@ class Search extends Component {
                 songs={this.state.results}
                 onClick={this.props.onClick}
               />
+              <Link to = "/">
+                <Button state = "primary" text="Back" />
+              </Link>
+              <Button state = "secondary" text="Suggest Selected Songs" />
             </div>
           ) : (
             <div>
