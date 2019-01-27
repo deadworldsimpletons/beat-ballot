@@ -4,20 +4,20 @@ import './Button.css';
 class Button extends Component {
   constructor(props) {
     super(props);
-    this.buttonColor = this.buttonColor.bind(this);
+    this.buttonState = this.buttonState.bind(this);
   }
-  buttonColor() {
-    var color = this.props.color;
-    if (color == 'blue') {
+  buttonState() {
+    var state = this.props.state;
+    if (state == 'primary') {
       return 'primaryButton';
     }
-    if (color == 'red') {
+    if (state == 'secondary') {
       return 'secondaryButton';
     }
   }
   render() {
     return (
-      <button type="button" className={this.buttonColor()} onClick={this.props.onClick}>{this.props.text}</button>
+      <button type="button" className={this.buttonState()} onClick={this.props.onClick}>{this.props.text}</button>
     );
   }
 }
