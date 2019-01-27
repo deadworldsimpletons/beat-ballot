@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import './JoinRoom.css';
 import image from '../tempImages/qr.png';
 import Button from '../Button/Button.js';
+import Logo from '../Logo/Logo.js';
+
 
 class JoinRoom extends Component {
   render() {
     return (
       <div>
         <center>
-        <img src = "../images/beatBallot.png" />
+        <Logo />
         <div className = "QR">
           <img src = {image}/>
         </div>
