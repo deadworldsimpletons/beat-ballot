@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ReactAudioPlayer from "react-audio-player";
-import image from "../tempImages/qr.png";
 import Button from "../Button/Button.js";
 import SongCardList from "../SongCardList/SongCardList.js";
 import Search from "../Search/Search.js";
