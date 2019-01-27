@@ -40,6 +40,7 @@ class Room extends Component {
       { room_id: this.room_id, suggestion: song },
       (err, res) => {
         if (err) throw err;
+        this.getRoom();
       }
     );
   }
@@ -54,6 +55,7 @@ class Room extends Component {
     return song => {
       config.lib.vote({ room_id: this.room_id, song_id: song.id, is_upvote }, (err, res) => {
         if (err) throw err;
+        this.getRoom();
       });
       this.setState({already_voted_ids: {...this.state.already_voted_ids, [song.id]: true}});
     }

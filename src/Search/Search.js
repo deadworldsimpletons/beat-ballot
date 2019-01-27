@@ -26,7 +26,6 @@ class Search extends Component {
 
   updateQuery(e) {
     this.setState({ q: e.target.value });
-    this.doSearch();
   }
 
   render() {
@@ -35,6 +34,9 @@ class Search extends Component {
         <center>
           <div className = "searchButtons">
             <input placeholder="Search..." onChange={this.updateQuery} />
+          </div>
+          <div>
+            <Button text="Search" state="primary" onClick={this.doSearch} />
           </div>
           {this.state.results && (
             <div className = "songListReturn">
