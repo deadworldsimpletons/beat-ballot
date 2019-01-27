@@ -5,7 +5,7 @@ import './SongCard.css';
 class SongCard extends Component {
   render() {
     return (
-        <center>
+        <center onClick={this.props.onClick}>
         <div className = "card">
 
           <div className = "contain">
@@ -14,10 +14,7 @@ class SongCard extends Component {
             </div>
 
             <div className = "songInfo">
-              <p> <span className='artist'> {this.props.artist} </span>
-              <span> &mdash; </span>
-              <span  className='songTitle'> {this.props.songName} </span> </p>
-            </div>
+              <span  className='songTitle'> {this.props.songName} </span> </div>
           </div>
 
           <div className = "votes">

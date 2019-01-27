@@ -18,11 +18,11 @@ class CreateRoom extends Component {
   }
 
   updateName(e) {
-    this.setState({ name: e.value })
+    this.setState({ name: e.target.value })
   }
 
   createRoom(e) {
-    lib.nwhacks19.api['@0.1.0'].create_room({ name: 'yeet' }, (err, res) => {
+    lib.nwhacks19.api['@0.1.0'].create_room({ name: this.state.name }, (err, res) => {
       this.setState(res);
     })
   }
