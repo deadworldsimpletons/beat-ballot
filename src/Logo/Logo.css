@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+.logoHeader {
+  font-size: 9vw;
+  display: inline-flex;
+  font-family:Nunito;
+  color: white;
+}
+
+.logoHeader img {
+    height: 9vw;
+}
