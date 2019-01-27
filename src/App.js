@@ -1,57 +1,67 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import LandingPage from './LandingPage/LandingPage.js';
-import CreateRoom from './CreateRoom/CreateRoom.js';
-import JoinRoom from './JoinRoom/JoinRoom.js';
-import ActivePageTest from './ActivePageTest/ActivePageTest.js';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import LandingPage from "./LandingPage/LandingPage.js";
+import CreateRoom from "./CreateRoom/CreateRoom.js";
+import JoinRoom from "./JoinRoom/JoinRoom.js";
+import ActivePageTest from "./ActivePageTest/ActivePageTest.js";
+import Room from "./Room/Room.js";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 function indexPage() {
-    return (
-      <div>
-        <Link to='/CreateRoom'>CreateRoom</Link>
-        <Link to='/JoinRoom'>JoinRoom</Link>
-        <LandingPage />
-      </div>
-    );
+  return (
+    <div>
+      <Link to="/CreateRoom">CreateRoom</Link>
+      <Link to="/JoinRoom">JoinRoom</Link>
+      <LandingPage />
+    </div>
+  );
 }
 
 function aboutPage() {
-    return (
-      <div>
-        <CreateRoom />
-      </div>
-    );
+  return (
+    <div>
+      <CreateRoom />
+    </div>
+  );
 }
 
 function usersPage() {
-    return (
-      <div>
+  return (
+    <div>
       <JoinRoom />
-      </div>
-    );
+    </div>
+  );
 }
 
 function activePage() {
-    return (
-      <div>
+  return (
+    <div>
       <ActivePageTest />
-      </div>
-    );
+    </div>
+  );
+}
+
+function room() {
+  return (
+    <div>
+      <Room />
+    </div>
+  );
 }
 
 class App extends Component {
   render() {
     return (
-        <Router>
-          <div>
-            <Route exact path="/" exact component={indexPage} />
-            <Route exact path="/CreateRoom/" component={aboutPage} />
-            <Route exact path="/JoinRoom/" component={usersPage} />
-            <Route exact path="/ActivePageTest/" component={activePage} />
-          </div>
-        </Router>
+      <Router>
+        <div>
+          <Route exact path="/" exact component={indexPage} />
+          <Route exact path="/CreateRoom/" component={aboutPage} />
+          <Route exact path="/JoinRoom/" component={usersPage} />
+          <Route exact path="/ActivePageTest/" component={activePage} />
+          <Route exact path="/Room/" component={room} />
+        </div>
+      </Router>
     );
   }
 }
