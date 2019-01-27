@@ -40,10 +40,12 @@ class Search extends Component {
                 songs={this.state.results}
                 onClick={this.props.onClick}
               />
-              <Link to = "/">
-                <Button state = "primary" text="Back" />
-              </Link>
-              <Button state = "secondary" text="Suggest Selected Songs" />
+              <div className = "searchButtons">
+                <Link to = "/">
+                  <Button state = "primary" text="Back" />
+                </Link>
+                <Button state = "secondary" text="Suggest Songs" />
+              </div>
             </div>
           ) : (
             <div>

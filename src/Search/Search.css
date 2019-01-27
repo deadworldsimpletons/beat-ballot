@@ -1,3 +1,11 @@
-.searchStyle {
+.searchButtons {
+  display: inline-block;
+  width: 100%;
+}
 
+.searchButtons button{
+  width: 40%;
+  margin-right: 5%;
+  margin-left: 5%;
+  font-size: 4.5vw;
 }
