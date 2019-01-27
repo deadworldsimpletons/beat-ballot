@@ -21,13 +21,13 @@ class JoinRoom extends Component {
 
   render() {
     return (
-      <div>
+      <div className = "contents">
         <center>
           <Logo />
+
           <div className="input">
             <input placeholder="Room ID" onChange={this.setRoom} />
           </div>
-          <p>(placeholder)Or scan QR code</p>
           <div className="buttons">
             <Link to={`/Room/${this.state.room_id}`}>
               <Button state="primary" text="Join" />
