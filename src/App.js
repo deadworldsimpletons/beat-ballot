@@ -10,8 +10,6 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 function indexPage() {
     return (
       <div>
-        <Link to='/CreateRoom'>CreateRoom</Link>
-        <Link to='/JoinRoom'>JoinRoom</Link>
         <LandingPage />
       </div>
     );
