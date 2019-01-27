@@ -11,15 +11,6 @@ class JoinRoom extends Component {
       <div>
         <center>
           <Logo />
-          <div className="QR">
-            <img src={image} />
-          </div>
-          <p>Scan to Join</p>
-          <div className="buttons">
-            <Link to="/">
-              <Button state="primary" text="Back" />
-            </Link>
-          </div>
         </center>
       </div>
     );
