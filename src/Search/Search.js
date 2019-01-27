@@ -32,17 +32,16 @@ class Search extends Component {
     return (
       <div>
         <center>
-          {this.state.results ? (
+          <div>
+            <input placeholder="Search..." onChange={this.updateQuery} />
+            <Button state="secondary" text="Search" onClick={this.doSearch} />
+          </div>
+          {this.state.results && (
             <div>
               <SongCardList
                 songs={this.state.results}
                 onClick={this.props.onClick}
               />
-            </div>
-          ) : (
-            <div>
-              <input placeholder="Search..." onChange={this.updateQuery} />
-              <Button state="secondary" text="Search" onClick={this.doSearch} />
             </div>
           )}
         </center>

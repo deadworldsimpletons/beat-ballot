@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import image from "../tempImages/qr.png";
 import Button from "../Button/Button.js";
 import SongCardList from "../SongCardList/SongCardList.js";
+import Search from "../Search/Search.js";
 import Logo from "../Logo/Logo.js";
 import config from "../config.js";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
@@ -18,12 +19,21 @@ class Room extends Component {
   constructor(props) {
     super(props);
     this.getRoom = this.getRoom.bind(this);
+    this.addSuggestion = this.addSuggestion.bind(this);
+    this.room_id = this.props.match.params.room_id;
   }
 
   getRoom() {
-    config.lib.poll_room(this.props.match.params, (err, res) => {
+    config.lib.poll_room({room_id: this.room_id}, (err, res) => {
       if (err) throw err;
       this.setState(res);
+    });
+  }
+
+  addSuggestion(song) {
+    debugger
+    config.lib.add_suggestion({ room_id: this.room_id, name: song.name, id: song.id }, (err, res) => {
+      if (err) throw err;
     });
   }
 
@@ -47,6 +57,7 @@ class Room extends Component {
             <h1>Candidates:</h1>
             { /* TODO: swiping */ }
             <SongCardList songs={this.state.voting_pool} />
+            <Search onClick={this.addSuggestion} />
           </div>
         </center>
       </div>
