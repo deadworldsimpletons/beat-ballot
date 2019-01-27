@@ -17,6 +17,11 @@ input {
   margin-bottom: .5em;
 }
 
+input:active {
+  border-radius: 5px;
+  border: 2px solid #808080;
+}
+
 .title {
   color:white;
   font-size: 2em;
@@ -31,17 +36,18 @@ input {
 
 .qrCode .qrImg {
   background-color: #282828;
-  padding:1.8em;
+  padding:1.6em;
   width: 60%;
 
 }
 
 .qrCode p {
-  font-size: 7vw;
+  font-size: 6vw;
+  margin: 0;
 }
 
 .roomIdName {
-  font-size: 7vw;
+  font-size: 6vw;
   font-weight: bold;
 }
 
