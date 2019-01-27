@@ -27,7 +27,7 @@ class Search extends Component {
     return (
       <div>
         <center>
-        <input placeholder="Search..." onChange={this.doSearch} />
+        <input onChange={this.doSearch} placeholder = "Search" />
         <SongCardList songs={this.state.results} onClick={this.props.onClick} />
         </center>
       </div>
