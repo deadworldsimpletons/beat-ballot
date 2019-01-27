@@ -49,7 +49,7 @@ class App extends Component {
           <Route exact path="/CreateRoom/" component={aboutPage} />
           <Route exact path="/JoinRoom/" component={usersPage} />
           <Route exact path="/ActivePageTest/" component={activePage} />
-          <Route path="/Room/:room_id" component={Room} />
+          <Route exact path="/Room/:room_id/:is_owner?" component={Room} />
         </div>
       </Router>
     );

@@ -8,7 +8,7 @@ class SongCardList extends Component {
   }
 
   clicked(song) {
-    return this.props.onClick;
+    return typeof this.props.onClick === 'function' ? () => this.props.onClick(song) : () => true;
   }
 
   render() {
