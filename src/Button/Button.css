@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+* {
+  margin:.3em;
+}
+Button {
+  font-size:2em;
+  border-radius: 4px;
+  color:white;
+  font-family: 'Nunito', sans-serif;
+  width: 80%;
+  padding: .75em;
+  opacity: .8;
+  border:none;
+
+}
+
+Button:active{
+  opacity: 1;
+}
+
+.primaryButton {
+  background-image: linear-gradient(-66deg, #4A62F9 0%, #7988E8 89%);
+  border: 0;
+  outline: 0;
+}
+
+.secondaryButton {
+  background-image: linear-gradient(-63deg, #4FA5E9 3%, #98D9F7 89%);
+  border: 0;
+  outline: 0;
+}
