@@ -9,8 +9,18 @@ class SongCard extends Component {
           <div className = "cover">
             <img src = {this.props.albumCover} />
           </div>
-          <div className = "songInfo"><p>{this.props.artist}</p> <p> &mdash; </p> {this.props.songName}</div>
-          <div className = "votes">{this.props.upVote} <p> &mdash; </p> {this.props.downVote}</div>
+          <div className = "songInfo">
+            <p> {this.props.artist}</p>
+            <p> &mdash; </p>
+            <p>{this.props.songName}</p>
+          </div>
+
+          <div className = "votes">
+            <p>{this.props.upVote}</p>
+            <p> &mdash; </p>
+            <p>{this.props.downVote}</p>
+          </div>
+
         </div>
     );
   }

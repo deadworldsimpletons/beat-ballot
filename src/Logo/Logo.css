@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 .logoHeader {
-  
+  font-size: 10vh;
+  width: 80%;
+  display: inline-flex;
+  font-family:Nunito;
+
+}
+.logoHeader img{
+  height: inherit;
 }

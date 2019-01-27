@@ -6,6 +6,7 @@ class Logo extends Component {
   render() {
     return (
         <div className = "logoHeader">
+            <p>BeatBallot</p>
             <img src = {logo} />
         </div>
     );

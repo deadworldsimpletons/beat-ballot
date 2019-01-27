@@ -2,10 +2,13 @@
 
 .card {
   display: inline-table;
-  border: 2px solid black;
+  background-color:
   width: 100%;
   float: left;
   color: white;
+  font-family: 'Nunito', sans-serif;
+
+
 }
 .card > * {
   display: inline-block;
@@ -17,16 +20,16 @@
   width: 25%;
 }
 
-.songInfo:first-child{
-  font-size: 3em;
-
-}
-
 .songInfo > * {
   display: inline-block;
-  font-family: 'Nunito', sans-serif;
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
 }
 
-.votes p{
-
+.votes > * {
+  display: inline-block;
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
 }
