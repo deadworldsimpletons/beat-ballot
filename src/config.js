@@ -2,7 +2,8 @@
 
 const config = {
   yasBase: 'http://35.197.64.54:8080/',
-  lib: lib.nwhacks19.api['@0.1.0'],
+  lib: lib.nwhacks19.api['@dev'],
+  pollInterval: 2 * 1000,
 }
 
 export default config;
