@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactAudioPlayer from "react-audio-player";
 import image from "../tempImages/qr.png";
 import Button from "../Button/Button.js";
 import SongCardList from "../SongCardList/SongCardList.js";
@@ -20,7 +21,10 @@ class Room extends Component {
     super(props);
     this.getRoom = this.getRoom.bind(this);
     this.addSuggestion = this.addSuggestion.bind(this);
+    this.playNext = this.playNext.bind(this);
+
     this.room_id = this.props.match.params.room_id;
+    this.is_owner = !!this.props.match.params.is_owner;
   }
 
   getRoom() {
@@ -31,8 +35,13 @@ class Room extends Component {
   }
 
   addSuggestion(song) {
-    debugger
     config.lib.add_suggestion({ room_id: this.room_id, name: song.name, id: song.id }, (err, res) => {
+      if (err) throw err;
+    });
+  }
+
+  playNext() {
+    config.lib.play_next({ room_id: this.room_id }, (err, res) => {
       if (err) throw err;
     });
   }
@@ -41,16 +50,13 @@ class Room extends Component {
     setInterval(this.getRoom, config.pollInterval);
   }
 
-  //Room Name
-  //Voting Pool as SongCardList
-  //Add Suggestion Button -> Search view
   render() {
-    //this.getRoom();
     return (
       <div>
         <center>
           <div>
             <h1>Now Playing:</h1>
+            { this.is_owner && this.state.now_playing && <ReactAudioPlayer autoPlay controls src={ config.yasBase + this.state.now_playing.id } onEnded={this.playNext} /> }
             <SongCardList songs={this.state.now_playing ? [this.state.now_playing] : []} />
             <h1>Up Next:</h1>
             <SongCardList songs={this.state.next_playing ? [this.state.next_playing] : []} />
@@ -62,15 +68,6 @@ class Room extends Component {
         </center>
       </div>
     );
-//           <p>{this.props.match.params.room_id}</p>
-//           <div className="buttons">
-//             <Link to="/">
-//               <Button state="primary" text="Add Suggestion" />
-//             </Link>
-//           </div>
-//         </center>
-//       </div>
-//     );
   }
 }
 
