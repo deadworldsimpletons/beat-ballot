@@ -31,17 +31,18 @@ input {
 
 .qrCode .qrImg {
   background-color: #282828;
-  padding:1.8em;
+  padding:1.6em;
   width: 60%;
 
 }
 
 .qrCode p {
-  font-size: 7vw;
+  font-size: 6vw;
+  margin: 0;
 }
 
 .roomIdName {
-  font-size: 7vw;
+  font-size: 6vw;
   font-weight: bold;
 }
 
