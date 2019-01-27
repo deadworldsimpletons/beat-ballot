@@ -1,0 +1,29 @@
+.card {
+  display: inline-table;
+  border: 2px solid black;
+  width: 100%;
+  float: left;
+}
+.card > * {
+  display: inline-block;
+}
+.cover {
+  width: 25%;
+}
+.cover img {
+  width: 25%;
+}
+
+.songInfo p:first-child{
+  font-size: auto;
+  font-weight: bold;
+}
+
+.songInfo > * {
+  display: inline-block;
+  font-family: 'Nunito', sans-serif;
+}
+
+.votes p{
+
+}

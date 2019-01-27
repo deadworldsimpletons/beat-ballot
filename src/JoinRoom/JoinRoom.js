@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './JoinRoom.css';
+import image from '../tempImages/qr.png';
 import Button from '../Button/Button.js';
 
 class JoinRoom extends Component {
@@ -8,11 +9,10 @@ class JoinRoom extends Component {
       <div>
         <center>
         <img src = "../images/beatBallot.png" />
-        <div className = "forms">
-
+        <div className = "QR">
+          <img src = {image}/>
         </div>
         <p>Scan to Join</p>
-        <img src = ""/> 
         <div className = "buttons">
           <Button color='blue' text='Back'/>
         </div>

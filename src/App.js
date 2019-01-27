@@ -3,12 +3,15 @@ import logo from './logo.svg';
 import './App.css';
 import LandingPage from './LandingPage/LandingPage.js';
 import CreateRoom from './CreateRoom/CreateRoom.js';
+import JoinRoom from './JoinRoom/JoinRoom.js';
+import ActivePageTest from './ActivePageTest/ActivePageTest.js';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 function indexPage() {
     return (
       <div>
         <Link to='/CreateRoom'>CreateRoom</Link>
+        <Link to='/JoinRoom'>JoinRoom</Link>
         <LandingPage />
       </div>
     );
@@ -25,7 +28,15 @@ function aboutPage() {
 function usersPage() {
     return (
       <div>
-        <p>Users</p>
+      <JoinRoom />
+      </div>
+    );
+}
+
+function activePage() {
+    return (
+      <div>
+      <ActivePageTest />
       </div>
     );
 }
@@ -37,7 +48,8 @@ class App extends Component {
         <div>
          <Route exact path="/" exact component={indexPage} />
          <Route exact path="/CreateRoom/" component={aboutPage} />
-         <Route exact path="/users/" component={usersPage} />
+         <Route exact path="/JoinRoom/" component={usersPage} />
+         <Route exact path="/ActivePageTest/" component={activePage} />
         </div>
         </Router>
     );
