@@ -14,7 +14,8 @@ class SongCard extends Component {
             </div>
 
             <div className = "songInfo">
-              <span  className='songTitle'> {this.props.songName} </span> </div>
+              <span  className='songTitle'> {this.props.songName} </span>
+            </div>
           </div>
 
           <div className = "votes">
