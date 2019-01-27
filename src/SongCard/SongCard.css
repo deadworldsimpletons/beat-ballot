@@ -36,6 +36,10 @@
   font-weight: bold;
 }
 
+.songInfo .songTitle{
+  font-style: italic;
+}
+
 .songInfo {
   vertical-align: middle;
 }
