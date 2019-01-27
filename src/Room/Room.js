@@ -71,6 +71,7 @@ class Room extends Component {
       <div>
         <center>
           <div className = "roomHeader">
+          <span className = "roomTitle">{this.state.name}</span>
             <h1>Now Playing:</h1>
             {this.is_owner && this.state.now_playing && (
               <ReactAudioPlayer

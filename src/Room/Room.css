@@ -8,3 +8,10 @@
 .roomHeader input {
   font-size: 1.2em;
 }
+
+.roomTitle {
+  font-size: 2em;
+  align-content: center;
+  font-weight: bold;
+  margin-top:.5em;
+}
