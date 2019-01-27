@@ -2,17 +2,18 @@
 * {
   color: white;
   font-family: 'Nunito', sans-serif;
+  overflow: hidden;
 }
 
 input {
-  font-size: 2em;
+  font-size: 6vw;
   background-color: #282828;
   border-radius: 5px;
   border: 2px solid white;
   color:white;
   padding: .5em;
   font-family: 'Nunito', sans-serif;
-  width: 70%;
+  width: 75%;
   margin-top:.5em;
 }
 
@@ -24,24 +25,27 @@ input {
 }
 
 .qrCode {
-  display: flex;
-  flex-direction:column;
-  align-content: center;
+  transform: translateY(10%);
   margin-top: 2em;
 }
 
-.qrCode img {
+.qrCode .qrImg {
   background-color: #282828;
-  padding:2em;
-  width: 70%;
+  padding:1.8em;
+  width: 60%;
 
 }
 
 .qrCode p {
-  font-size: 2em;
+  font-size: 7vw;
 }
 
 .roomIdName {
-  font-size: 2em;
+  font-size: 7vw;
   font-weight: bold;
+}
+
+.containLogo {
+  transform: translateY(30%);
+  height: 100%;
 }

@@ -33,17 +33,20 @@ class CreateRoom extends Component {
       <div>
         <center>
         { this.state.qr_data_url ?
-          <div className = "qrCode">
-            <img src={this.state.qr_data_url} />
+          <div>
+            <Logo />
+            <span className = "qrCode">
+            <img src={this.state.qr_data_url} className ="qrImg" />
             <p>Scan to Join</p>
             <div className = "roomIdName">{this.state.room_id}</div>
             <div className = "buttons">
               <Button state = 'primary' text='Back'/>
             </div>
+            </span>
           </div>
 
           :
-          <div>
+          <div className = "containLogo">
             <Logo />
             <div className = "buttons">
               <br />
