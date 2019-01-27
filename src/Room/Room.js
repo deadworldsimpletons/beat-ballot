@@ -28,16 +28,19 @@ class Room extends Component {
   }
 
   getRoom() {
-    config.lib.poll_room({room_id: this.room_id}, (err, res) => {
+    config.lib.poll_room({ room_id: this.room_id }, (err, res) => {
       if (err) throw err;
       this.setState(res);
     });
   }
 
   addSuggestion(song) {
-    config.lib.add_suggestion({ room_id: this.room_id, name: song.name, id: song.id }, (err, res) => {
-      if (err) throw err;
-    });
+    config.lib.add_suggestion(
+      { room_id: this.room_id, suggestion: song },
+      (err, res) => {
+        if (err) throw err;
+      }
+    );
   }
 
   playNext() {
@@ -56,12 +59,23 @@ class Room extends Component {
         <center>
           <div>
             <h1>Now Playing:</h1>
-            { this.is_owner && this.state.now_playing && <ReactAudioPlayer autoPlay controls src={ config.yasBase + this.state.now_playing.id } onEnded={this.playNext} /> }
-            <SongCardList songs={this.state.now_playing ? [this.state.now_playing] : []} />
+            {this.is_owner && this.state.now_playing && (
+              <ReactAudioPlayer
+                autoPlay
+                controls
+                src={config.yasBase + this.state.now_playing.id}
+                onEnded={this.playNext}
+              />
+            )}
+            <SongCardList
+              songs={this.state.now_playing ? [this.state.now_playing] : []}
+            />
             <h1>Up Next:</h1>
-            <SongCardList songs={this.state.next_playing ? [this.state.next_playing] : []} />
+            <SongCardList
+              songs={this.state.next_playing ? [this.state.next_playing] : []}
+            />
             <h1>Candidates:</h1>
-            { /* TODO: swiping */ }
+            {/* TODO: swiping */}
             <SongCardList songs={this.state.voting_pool} />
             <Search onClick={this.addSuggestion} />
           </div>
