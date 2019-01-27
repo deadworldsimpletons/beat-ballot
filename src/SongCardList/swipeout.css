@@ -3,6 +3,11 @@
   position: relative;
   margin-top: 1em;
 }
+
+.rc-swipeout .card {
+  margin:0;
+}
+
 .rc-swipeout-content {
   position: relative;
   background-color: #333;
