@@ -5,6 +5,10 @@
   margin: 1em;
 }
 
+.roomHeader {
+  width: 100%;
+}
+
 .roomHeader input {
   font-size: 1.2em;
 }

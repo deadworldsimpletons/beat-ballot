@@ -49,9 +49,6 @@ class CreateRoom extends Component {
                   <Link to={`/Room/${this.state.room_id}/true`}>
                     <Button state="primary" text="Continue to Room" />
                   </Link>
-                  <Link to="/">
-                    <Button state="primary" text="Back" />
-                  </Link>
                 </div>
               </span>
             </div>

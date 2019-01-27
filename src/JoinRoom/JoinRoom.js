@@ -32,9 +32,7 @@ class JoinRoom extends Component {
             <Link to={`/Room/${this.state.room_id}`}>
               <Button state="primary" text="Join" />
             </Link>
-            <Link to="/">
-              <Button state="primary" text="Back" />
-            </Link>
+
           </div>
         </center>
       </div>
