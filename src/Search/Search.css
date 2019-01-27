@@ -9,3 +9,8 @@
   margin-left: 5%;
   font-size: 4.5vw;
 }
+
+.searchPage {
+  background: url(../images/search.png) no-repeat scroll 7px 7px;
+  padding-left:30px;
+}

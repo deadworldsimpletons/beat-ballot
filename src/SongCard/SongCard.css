@@ -33,16 +33,10 @@
   width: 100%;
 }
 
-.songInfo .artist{
-  font-weight: bold;
-}
-
-.songInfo .songTitle{
-  font-style: italic;
-}
-
 .songInfo {
   vertical-align: middle;
+  font-weight: bold;
+  text-align: left;
 }
 
 .votes .upVote {

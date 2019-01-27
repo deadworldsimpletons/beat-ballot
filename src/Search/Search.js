@@ -48,7 +48,7 @@ class Search extends Component {
               </div>
             </div>
           ) : (
-            <div>
+            <div className = "searchPage">
               <input placeholder="Search..." onChange={this.updateQuery} />
               <Button state="secondary" text="Search" onClick={this.doSearch} />
             </div>
